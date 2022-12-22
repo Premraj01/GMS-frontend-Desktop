@@ -3,7 +3,8 @@ import { Stack, Typography } from '@mui/material'
 import Iconify from '../utils/components/iconify'
 import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
-import FormModel from '../components/FormModel/FormModel'
+import FormModal from '../components/Customer-Form/FormModal/FormModal'
+import CustomerTable from '../components/CustomersList/CustomersList'
 
 const CustomerPage = () => {
 
@@ -33,7 +34,8 @@ const CustomerPage = () => {
                         New Customer
                     </Button>
                 </Stack>
-                <FormModel isOpen={formModel} isClose={closeFormModal} />
+                <FormModal isOpen={formModel} isClose={closeFormModal} />
+                <CustomerTable />
             </Container>
         </>
 
