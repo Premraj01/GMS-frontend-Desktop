@@ -5,11 +5,12 @@ import DashboardPage from '../pages/DashboardPage';
 
 const Routes = () => {
     const routes = useRoutes([
+
         {
             path: '/dashboard',
             element: <DashboardLayout />,
             children: [
-                { element: <Navigate to="/dashboard" />, index: true },
+                { element: <Navigate to="dashboard/landing" /> },
                 { path: 'landing', element: <DashboardPage /> },
                 {
                     path: 'customer',
@@ -20,7 +21,12 @@ const Routes = () => {
 
         },
 
+        {
+            path: '/',
+            element: <Navigate to="dashboard/landing" />,
+            index: true
 
+        }
     ]);
     return routes
 }

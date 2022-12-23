@@ -123,6 +123,7 @@ const LoginForm = () => {
 
                             <TextField
                                 name="email"
+                                type='email'
                                 label="Email"
                                 size='small'
                                 value={customer?.communication?.email}
@@ -132,6 +133,7 @@ const LoginForm = () => {
                                     }
                                 }
                                 )}
+                                helperText=""
 
                             />
                             <TextField
@@ -146,6 +148,7 @@ const LoginForm = () => {
                                 }
                                 )}
 
+                                helperText=""
                             />
 
                             <TextField
@@ -161,6 +164,7 @@ const LoginForm = () => {
                                 }
                                 )}
 
+                                helperText=""
                             />
                         </Stack>
                     </Grid>

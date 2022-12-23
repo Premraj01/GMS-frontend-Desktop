@@ -23,7 +23,7 @@ const CustomerPage = () => {
             <Helmet>
                 <title> GMS | Customer </title>
             </Helmet>
-            <Container>
+            <>
                 <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
                     <Typography variant="h4" gutterBottom>
                         Customer
@@ -36,7 +36,7 @@ const CustomerPage = () => {
                 </Stack>
                 <FormModal isOpen={formModel} isClose={closeFormModal} />
                 <CustomerTable />
-            </Container>
+            </>
         </>
 
     )
