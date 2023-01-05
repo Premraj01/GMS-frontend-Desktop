@@ -2,6 +2,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from '../layouts/dashboard';
 import CustomerPage from '../pages/CustomerPage';
 import DashboardPage from '../pages/DashboardPage';
+import ProductPage from '../pages/ProductPage';
 
 const Routes = () => {
     const routes = useRoutes([
@@ -16,7 +17,12 @@ const Routes = () => {
                     path: 'customer',
                     element: <CustomerPage />
 
-                }
+                },
+                {
+                    path: 'product',
+                    element: <ProductPage />
+
+                },
             ]
 
         },

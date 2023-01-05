@@ -6,7 +6,7 @@ import { Customer } from '../../../../shared/model/customer.model';
 import { customerFormError } from '../ErrorForm';
 
 
-const LoginForm = () => {
+const AddCustomerForm = () => {
     const [customer, setCustomer] = useState<Partial<Customer>>({});
 
     const isError = (customer: Partial<Customer>) => {
@@ -182,4 +182,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm
+export default AddCustomerForm

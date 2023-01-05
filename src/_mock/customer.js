@@ -5,6 +5,7 @@ const TABLE_HEAD = [
 	{ id: "address", label: "Address", alignRight: false },
 	{ id: "machine", label: "Machine", alignRight: false },
 	{ id: "status", label: "Status", alignRight: false },
+	{ id: "credit-debit", label: "Credit/Debit", alignRight: false },
 	{ id: "", label: "", alignRight: false },
 ];
 
@@ -15,6 +16,16 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
+	},
+	{
+		id: "1",
+		name: "Tushar nevase",
+		conatctNumber: "999999999999",
+		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
+		machine: "Mahindra Jio",
+		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -24,6 +35,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -33,6 +45,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -42,6 +55,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -51,15 +65,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
-	},
-	{
-		id: "1",
-		name: "Tushar nevase",
-		conatctNumber: "999999999999",
-
-		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
-		machine: "Mahindra Jio",
-		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "5",
@@ -69,6 +75,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -78,6 +85,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "3",
@@ -87,6 +95,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -96,6 +105,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -105,6 +115,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -114,6 +125,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -123,6 +135,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -132,6 +145,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -141,6 +155,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -150,6 +165,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -159,6 +175,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -168,6 +185,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -177,6 +195,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -186,6 +205,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -195,6 +215,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -204,6 +225,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -213,6 +235,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -222,6 +245,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -231,6 +255,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -240,6 +265,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -249,6 +275,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -258,6 +285,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -267,6 +295,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -276,6 +305,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -285,6 +315,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 	{
 		id: "1",
@@ -294,6 +325,7 @@ const dummyCustomerData = [
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",
 		machine: "Mahindra Jio",
 		status: true,
+		credit_debit: 1200,
 	},
 ];
 

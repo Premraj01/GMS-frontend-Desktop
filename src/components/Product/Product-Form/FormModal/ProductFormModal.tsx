@@ -1,6 +1,6 @@
 import { Box, Link, Modal, Stack, Typography, Button, Container, Divider, Paper } from "@mui/material"
-import Iconify from '../../../utils/components/iconify'
-import AddCustomerForm from "./AddCustomerForm"
+import Iconify from '../../../../utils/components/iconify'
+import AddCustomerForm from "./AddProductForm"
 import { Form, StyledContent, StyledRoot } from './style'
 
 
@@ -9,7 +9,7 @@ interface Props {
     isClose: any
 }
 
-const FormModel = ({ isOpen, isClose }: Props) => {
+const ProductFormModel = ({ isOpen, isClose }: Props) => {
     const handleClose = () => {
         isClose()
     }
@@ -39,4 +39,4 @@ const FormModel = ({ isOpen, isClose }: Props) => {
     )
 }
 
-export default FormModel
+export default ProductFormModel

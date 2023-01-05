@@ -2,6 +2,7 @@ import Iconify from '../utils/components/iconify'
 import { Stack, Typography, Button } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
+import ProductFormModal from '../components/Product/Product-Form/FormModal/ProductFormModal'
 
 const ProductPage = () => {
     const [formModel, setFormModel] = useState(false)
@@ -21,15 +22,15 @@ const ProductPage = () => {
             <>
                 <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
                     <Typography variant="h4" gutterBottom>
-                        Customer
+                        Product
                     </Typography>
                     <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}
                         onClick={openFormModal}
                     >
-                        New Customer
+                        New product
                     </Button>
                 </Stack>
-                {/* <FormModal isOpen={formModel} isClose={closeFormModal} /> */}
+                <ProductFormModal isOpen={formModel} isClose={closeFormModal} />
             </>
 
         </>

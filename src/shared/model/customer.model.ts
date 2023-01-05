@@ -4,6 +4,7 @@ export interface Customer {
 	address: Address;
 	communication: Communication;
 	machine: Machine;
+	credit_debit: number;
 }
 export interface Address {
 	line1?: string;
