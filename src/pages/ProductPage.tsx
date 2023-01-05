@@ -1,13 +1,9 @@
-
-import { Stack, Typography, Button } from '@mui/material'
 import Iconify from '../utils/components/iconify'
+import { Stack, Typography, Button } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
-import CustomerFormModal from '../components/Customer/Customer-Form/FormModal/CustomerFormModal'
-import CustomerTable from '../components/Customer/CustomersList/CustomersList'
 
-const CustomerPage = () => {
-
+const ProductPage = () => {
     const [formModel, setFormModel] = useState(false)
 
     const openFormModal = () => {
@@ -17,11 +13,10 @@ const CustomerPage = () => {
     const closeFormModal = () => {
         setFormModel(false)
     }
-
     return (
         <>
             <Helmet>
-                <title> GMS | Customer </title>
+                <title> GMS | Product </title>
             </Helmet>
             <>
                 <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
@@ -34,12 +29,11 @@ const CustomerPage = () => {
                         New Customer
                     </Button>
                 </Stack>
-                <CustomerFormModal isOpen={formModel} isClose={closeFormModal} />
-                <CustomerTable />
+                {/* <FormModal isOpen={formModel} isClose={closeFormModal} /> */}
             </>
-        </>
 
+        </>
     )
 }
 
-export default CustomerPage
+export default ProductPage
