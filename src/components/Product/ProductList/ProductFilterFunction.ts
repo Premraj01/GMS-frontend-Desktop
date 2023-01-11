@@ -5,7 +5,7 @@ export const applySortFilter = (array: any, query: any) => {
 		return filter(
 			array,
 			(product: any) =>
-				product.name.toLowerCase().indexOf(query.toLowerCase()) !== -1,
+				product.productName.toLowerCase().indexOf(query.toLowerCase()) !== -1,
 		);
 	}
 	return array;

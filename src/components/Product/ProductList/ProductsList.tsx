@@ -1,7 +1,8 @@
 import { Card, Table, TableBody, TableCell, Paper, TablePagination, TableRow, Typography, Popover, MenuItem, IconButton } from '@mui/material'
 import { Fragment, useState } from 'react'
+import { Product } from '../../../shared/model/product.model';
 import Iconify from '../../../utils/components/iconify';
-import { dummyCustomerData, TABLE_HEAD } from '../../../_mock/customer';
+import { TABLE_HEAD, dummyProducts } from '../../../_mock/products';
 import { applySortFilter } from './ProductFilterFunction';
 import ProductHeaderList from './ProductsHeaderList';
 import ProductsListToolbar from './ProductsListToolbar';
@@ -31,7 +32,7 @@ const ProductTable = () => {
         setFilterName(event.target.value);
     };
 
-    const filteredProducts = applySortFilter(dummyCustomerData, filterName);
+    const filteredProducts = applySortFilter(dummyProducts, filterName);
 
     const isNotFound = !filteredProducts.length && !!filterName;
 
@@ -45,42 +46,56 @@ const ProductTable = () => {
                     />
                     <TableBody>
                         {
-                            filteredProducts.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((cust: any) => {
+                            filteredProducts.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((product: Product) => {
                                 return (
                                     <TableRow hover tabIndex={-1}>
                                         <TableCell>
-                                            {cust.id}
+                                            {product.id}
                                         </TableCell>
                                         <TableCell>
                                             <Typography variant="subtitle2" >
-                                                {cust.name}
+                                                {product.productName}
                                             </Typography>
                                         </TableCell>
                                         <TableCell>
                                             <Typography >
-                                                {cust.conatctNumber}
+                                                {product.productCode}
                                             </Typography>
                                         </TableCell>
                                         <TableCell>
                                             <Typography >
-                                                {cust.address}
+                                                {product.productCost}
                                             </Typography>
                                         </TableCell>
-                                        <TableCell>
-                                            <Typography >
-                                                {cust.machine}
-                                            </Typography>
-                                        </TableCell>
-                                        <TableCell>
 
+                                        <TableCell>
                                             <Typography >
-                                                {cust.status ? 'Active' : 'Inactive'}
+                                                {product.saleCost}
                                             </Typography>
-
                                         </TableCell>
                                         <TableCell>
                                             <Typography >
-                                                {cust.credit_debit}
+                                                {product.GST}%
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography >
+                                                {product.location}
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography >
+                                                {product.date}
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography >
+                                                {product.stock}
+                                            </Typography>
+                                        </TableCell>
+                                        <TableCell>
+                                            <Typography >
+                                                {product?.manufacturingCompany?.name}
                                             </Typography>
                                         </TableCell>
                                         <TableCell align="right">

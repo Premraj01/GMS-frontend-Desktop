@@ -3,6 +3,7 @@ import { Stack, Typography, Button } from '@mui/material'
 import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import ProductFormModal from '../components/Product/Product-Form/FormModal/ProductFormModal'
+import ProductTable from '../components/Product/ProductList/ProductsList'
 
 const ProductPage = () => {
     const [formModel, setFormModel] = useState(false)
@@ -31,6 +32,7 @@ const ProductPage = () => {
                     </Button>
                 </Stack>
                 <ProductFormModal isOpen={formModel} isClose={closeFormModal} />
+                <ProductTable />
             </>
 
         </>

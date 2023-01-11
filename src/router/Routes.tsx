@@ -1,5 +1,6 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from '../layouts/dashboard';
+import BillingPage from '../pages/BillingPage';
 import CustomerPage from '../pages/CustomerPage';
 import DashboardPage from '../pages/DashboardPage';
 import ProductPage from '../pages/ProductPage';
@@ -21,6 +22,11 @@ const Routes = () => {
                 {
                     path: 'product',
                     element: <ProductPage />
+
+                },
+                {
+                    path: 'billing',
+                    element: <BillingPage />
 
                 },
             ]

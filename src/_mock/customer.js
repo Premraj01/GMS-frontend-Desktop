@@ -1,7 +1,7 @@
 const TABLE_HEAD = [
-	{ id: "name", label: "Sr.no", alignRight: false },
+	{ id: "sr", label: "Sr.no", alignRight: false },
 	{ id: "name", label: "Name", alignRight: false },
-	{ id: "company", label: "Contact", alignRight: false },
+	{ id: "contact", label: "Contact", alignRight: false },
 	{ id: "address", label: "Address", alignRight: false },
 	{ id: "machine", label: "Machine", alignRight: false },
 	{ id: "status", label: "Status", alignRight: false },
@@ -29,7 +29,7 @@ const dummyCustomerData = [
 	},
 	{
 		id: "1",
-		name: "Tushar nevase",
+		name: "Santosh Jagtap",
 		conatctNumber: "999999999999",
 
 		address: "A/p karanjkhop,tal.koregaon,dist.satara-415000",

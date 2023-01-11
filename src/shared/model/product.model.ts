@@ -1,14 +1,14 @@
 export interface Product {
 	id: string;
 	productName: string;
+	productCode: string;
 	productCost: number;
 	GST: number;
-	MRP: number;
 	saleCost: number;
-	unit: string;
+	unit: Unit;
 	status: boolean;
 	location: string;
-	manufacturingCompany: string;
+	manufacturingCompany: Company;
 	date: string;
 	stock: number;
 	minimumStock: number;
@@ -16,6 +16,16 @@ export interface Product {
 }
 
 export interface Category {
+	id: string;
+	name: string;
+}
+
+export interface Unit {
+	id: string;
+	name: string;
+}
+
+export interface Company {
 	id: string;
 	name: string;
 }

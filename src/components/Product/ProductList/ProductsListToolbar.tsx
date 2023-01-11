@@ -45,7 +45,7 @@ const ProductsListToolbar = ({ filterName, onFilterName }: ProductListToolbar) =
             <StyledSearch
                 value={filterName}
                 onChange={onFilterName}
-                placeholder="Search customer..."
+                placeholder="Search product..."
                 startAdornment={
                     <InputAdornment position="start">
                         <Iconify icon="eva:search-fill" sx={{ color: 'text.disabled', width: 20, height: 20 }} />
