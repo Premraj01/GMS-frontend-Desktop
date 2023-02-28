@@ -12,7 +12,6 @@ import { Form } from './style';
 
 const AddProductForm = () => {
     const [product, setProduct] = useState<Partial<Product>>({});
-    const [value, setValue] = useState<Dayjs | null>(null);
     const [categoryModal, setCategoryModal] = useState(false)
     const [unitModal, setUnitModal] = useState(false)
 
@@ -146,25 +145,25 @@ const AddProductForm = () => {
                                 label="Purchase Cost"
                                 name='cost'
                                 inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                                value={product?.productCost}
-                                onChange={(e: any) => setProduct({ ...product, productCost: e.target.value })}
-                                error={product.productCost! <= 0}
-                                helperText={product.productCost! <= 0 ? "Cost cannot be zero!" : ""}
+                                value={product?.purchaseCost}
+                                onChange={(e: any) => setProduct({ ...product, purchaseCost: e.target.value })}
+                                error={product.purchaseCost! <= 0}
+                                helperText={product.purchaseCost! <= 0 ? "Cost cannot be zero!" : ""}
                             />
 
 
                             <TextField
-                                id="sale-cost"
-                                name="sale-cost"
-                                label="Sale Cost"
+                                id="MRP"
+                                name="MRP"
+                                label="MRP"
                                 size='small'
                                 inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
                                 maxRows={4}
                                 required
-                                value={product?.saleCost}
-                                onChange={(e: any) => setProduct({ ...product, saleCost: e.target.value })}
-                                error={product.saleCost! <= 0}
-                                helperText={product.saleCost! <= 0 ? "Sale cost cannot be zero!" : ""}
+                                value={product?.MRP}
+                                onChange={(e: any) => setProduct({ ...product, MRP: e.target.value })}
+                                error={product.MRP! <= 0}
+                                helperText={product.MRP! <= 0 ? "MRP cannot be zero!" : ""}
                             />
                             <TextField
                                 id="gst"
@@ -182,6 +181,12 @@ const AddProductForm = () => {
                                 helperText={product.GST! <= 0 ? "GST cannot be zero!" : ""}
                                 required
                             />
+
+
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Stack spacing={2}>
                             <Grid container  >
                                 <Grid item xs={10}>
                                     <TextField
@@ -231,28 +236,6 @@ const AddProductForm = () => {
                                     </Paper>
                                 </Modal>
                             </Grid>
-
-                        </Stack>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Stack spacing={2}>
-                            {/* <TextField
-                                type="date"
-                                name="date"
-                                label="Date"
-                                size='small'
-                                // value={customer?.communication?.contactNumber}
-                                // onChange={e => setCustomer({
-                                //     ...customer, communication: {
-                                //         ...customer?.communication!, contactNumber: e.target.value
-                                //     }
-                                // }
-                                // )}
-                                // error={customer?.communication?.contactNumber === ''}
-                                // helperText={customer.communication?.contactNumber === "" ? "Contact number is required!" : " "}
-                                required
-
-                            /> */}
                             <TextField
                                 id='stock'
                                 name="stock"

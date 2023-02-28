@@ -1,13 +1,15 @@
 import { Card, Table, TableBody, TableCell, Paper, TablePagination, TableRow, Typography, Popover, MenuItem, IconButton } from '@mui/material'
-import { Fragment, useState } from 'react'
-import { TABLE_HEAD } from '../../../shared/TableHeaders/Customer';
-import Iconify from '../../../utils/components/iconify';
-import { dummyCustomerData } from '../../../_mock/customer';
-import { applySortFilter } from './CustomerFilterFunction';
-import CustomerHeaderList from './CustomersHeaderList';
-import CustomersListToolbar from './CustomersListToolbar';
 
-const CustomerTable = () => {
+import React, { Fragment, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { TABLE_HEAD } from '../../../shared/TableHeaders/Customer'
+import Iconify from '../../../utils/components/iconify/Iconify'
+import { dummyCustomerData, } from '../../../_mock/customer'
+import { applySortFilter } from './BillsFilterFunction'
+import BillsHeaderList from './BillsHeaderList'
+import BillsListToolbar from './BillsListToolbar'
+
+const BillsList = () => {
     const [open, setOpen] = useState(null);
     const [rowsPerPage, setRowsPerPage] = useState(10);
     const [page, setPage] = useState(0);
@@ -32,21 +34,19 @@ const CustomerTable = () => {
         setFilterName(event.target.value);
     };
 
-    const filteredCustomers = applySortFilter(dummyCustomerData, filterName);
+    const filteredBills = applySortFilter(dummyCustomerData, filterName);
 
-    const isNotFound = !filteredCustomers.length && !!filterName;
-
+    const isNotFound = !filteredBills.length && !!filterName;
     return (
-
         <Fragment>
             <Card>
-                <CustomersListToolbar filterName={filterName} onFilterName={handleFilterByName} />
+                <BillsListToolbar filterName={filterName} onFilterName={handleFilterByName} />
                 <Table>
-                    <CustomerHeaderList headLabel={TABLE_HEAD}
+                    <BillsHeaderList headLabel={TABLE_HEAD}
                     />
                     <TableBody>
                         {
-                            filteredCustomers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((cust: any) => {
+                            filteredBills.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((cust: any) => {
                                 return (
                                     <TableRow hover tabIndex={-1}>
                                         <TableCell>
@@ -94,70 +94,10 @@ const CustomerTable = () => {
                             })
                         }
                     </TableBody>
-                    {isNotFound && (
-                        <TableBody>
-                            <TableRow>
-                                <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
-                                    <Paper
-                                        sx={{
-                                            textAlign: 'center',
-                                        }}
-                                    >
-                                        <Typography variant="h6" paragraph>
-                                            Not found
-                                        </Typography>
 
-                                        <Typography variant="body2">
-                                            No results found for &nbsp;
-                                            <strong>&quot;{filterName}&quot;</strong>.
-                                            <br /> Try checking for typos or using complete words.
-                                        </Typography>
-                                    </Paper>
-                                </TableCell>
-                            </TableRow>
-                        </TableBody>
-                    )}
                 </Table>
-
-                <TablePagination
-                    rowsPerPageOptions={[5, 10, 25]}
-                    component="div"
-                    count={filteredCustomers.length}
-                    rowsPerPage={rowsPerPage}
-                    page={page}
-                    onPageChange={handleChangePage}
-                    onRowsPerPageChange={handleChangeRowsPerPage}
-                />
             </Card>
-            <Popover
-                open={Boolean(open)}
-                anchorEl={open}
-                onClose={handleCloseMenu}
-                anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
-                transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-                PaperProps={{
-                    sx: {
-                        p: 1,
-                        width: 140,
-                        '& .MuiMenuItem-root': {
-                            px: 1,
-                            typography: 'body2',
-                            borderRadius: 0.75,
-                        },
-                    },
-                }}
-            >
-                <MenuItem>
-                    <Iconify icon={'eva:edit-fill'} sx={{ mr: 2 }} />
-                    Edit
-                </MenuItem>
-
-                <MenuItem sx={{ color: 'error.main' }}>
-                    <Iconify icon={'eva:trash-2-outline'} sx={{ mr: 2 }} />
-                    Delete
-                </MenuItem>
-            </Popover>
         </Fragment>
     )
 }
-export default CustomerTable
+export default BillsList

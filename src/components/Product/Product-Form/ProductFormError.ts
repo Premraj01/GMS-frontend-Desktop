@@ -5,7 +5,7 @@ const productFormError = (product: Partial<Product>) => {
 	if (
 		!product.productName ||
 		!product.productCode ||
-		!product.productCost ||
+		!product.MRP ||
 		!product.saleCost ||
 		!product.GST ||
 		!product.stock ||

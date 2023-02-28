@@ -64,7 +64,7 @@ const ProductTable = () => {
                                         </TableCell>
                                         <TableCell>
                                             <Typography >
-                                                {product.productCost}
+                                                {product.purchaseCost}
                                             </Typography>
                                         </TableCell>
 
